@@ -34,16 +34,26 @@ h1 {
 
 }
 
-.header a h4 {
+.header a  {
+  display: flex;
   border-top: 2px solid black;
   border-bottom: 2px solid black;
   margin: 0;
   max-width: 250px;
 }
 
-.header a h4:nth-child(3){
+.header a:nth-child(3){
   border-top: none;
   border-bottom: none;
+}
+
+.section {
+  padding: 24px 0;
+}
+
+.section h2 {
+  max-width: 250px;
+  border-bottom: 2px solid black;
 }
 
 
@@ -52,6 +62,7 @@ h1 {
   padding: 12px;
   display: flex;
   justify-content: flex-start;
+  flex-direction: column;
 }
 
 
