@@ -7,7 +7,7 @@ body {
   margin: 0;
 }
 
-@media screen and (prefers-reduced-motion: no-preference) {
+@media screen  {
   html,
   body {
     scroll-behavior: smooth; } }
@@ -19,11 +19,23 @@ h1 {
   padding: 0 0 12px 0;
 }
 
+.header-container{
+  max-width: 900px;;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
 .header {
   width: 100%;
   height: 100%;
   padding: 0 12px;
+  max-width: 300px;
+}
 
+.surf-forecast{
+  display: flex;
+  align-items: center;
 }
 
 .header a  {
@@ -31,7 +43,7 @@ h1 {
   border-top: 2px solid black;
   border-bottom: 2px solid black;
   margin: 0;
-  max-width: 250px;
+  max-width: 300px;
 }
 
 .header a:nth-child(3){
@@ -44,30 +56,68 @@ h1 {
 }
 
 .section h2 {
-  max-width: 250px;
+  max-width: 300px;
+  width: 100%;
   border-bottom: 2px solid black;
+  margin: 0 0 0 12px;;
+  /* padding: 0 12px; */
+  /* max-width: 700px; */
+  /* margin: 0 auto; */
 }
 
+.section p {
+  padding: 0 12px;
+}
+
+.about {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about h2 {
+  /* padding: 12px ; */
+  color: white;
+  border-bottom: 2px solid white;
+  margin: 0 0 0 12px;
+  /* text-shadow: 1px 1px 1px gray; */
+}
+
+.about .opacity-wrap {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,.1); 
+  min-height: 600px;
+  min-width: 900px;
+}
+
+.about .section-content p {
+  color: white;
+  max-width: 350px;
+  /* text-shadow: 1px 1px 1px gray; */
+}
 
 .main-content{
-  max-width: 1000px;
-  padding: 12px;
+  /* max-width: 1000px; */
+  /* padding: 12px; */
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-
-  /* just a test */
+  /* padding-left: 148px; */
 }
 
 .ocracoke-img {
-  min-height: 500px; 
+  min-height: 600px; 
+  min-width: 900px;
+  width: 100%;
   background-image: url('assets/ocracoke-surf.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  /* opacity: 0.5; */
+}
 
-  /* get this to go full width */
+.section-content{
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 
