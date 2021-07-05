@@ -1,0 +1,29 @@
+{
+  "name": "awilkesbooth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boothaw/awilkesbooth.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/boothaw/awilkesbooth/issues"
+  },
+  "homepage": "https://github.com/boothaw/awilkesbooth#readme",
+  "dependencies": {
+    "webpack": "^5.41.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.2",
+    "babel-preset-es2015": "^6.24.1",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
