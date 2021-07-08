@@ -95,6 +95,10 @@ h1 {
   margin-left: 0;
 }
 
+.skills a {
+  color: #696969;
+}
+
 .job {
   padding: 24px 0 0 0;
 }
@@ -128,7 +132,7 @@ h1 {
 }
 
 .job a {
-  color: #aaaaaa;
+  color: #696969;
 }
 
 .about {
@@ -206,12 +210,18 @@ h1 {
 }
 
 .contact a {
-  color: #aaaaaa;
+  color: #696969;
   padding-left: 12px;
+  padding-bottom: 4px;
 }
 
 .contact img {
- height: 22px;
+ height: 24px;
+}
+
+.contact svg {
+  height: 24px;
+  width: 24px;
 }
 
 
