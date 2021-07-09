@@ -51,6 +51,7 @@ h1 {
   border-bottom: 2px solid black;
 }
 
+
 .surf-forecast p {
   margin: 0;
 }
@@ -158,10 +159,8 @@ h1 {
 .about .section-content p {
   color: black;
   max-width: 350px;
-  /* padding: 24px 0 0 24px; */
   padding: 12px 0 0 24px;
   margin: 0;
-  /* font-weight: bold; */
 }
 
 .main-content{
