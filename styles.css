@@ -1,27 +1,32 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+
 body {
   width: 100%;
   height: 100%;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   letter-spacing: 1px;
   color: black;
   margin: 0;
-  scroll-behavior: smooth; 
+  scroll-behavior: smooth;
 }
 
-@media screen  {
+@media screen {
   html,
-  body {
-    scroll-behavior: smooth; } }
-
-
+body {
+    scroll-behavior: smooth;
+  }
+}
 h1 {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0 0 12px 0;
 }
 
-.header-container{
-  max-width: 900px;;
+.header-container {
+  max-width: 900px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -44,19 +49,18 @@ h1 {
   border: none;
 }
 
-.surf-forecast{
+.surf-forecast {
   display: flex;
   align-items: flex-end;
   max-width: 250px;
   border-bottom: 2px solid black;
 }
 
-
 .surf-forecast p {
   margin: 0;
 }
 
-.header a  {
+.header a {
   display: flex;
   border-top: 2px solid black;
   border-bottom: 2px solid black;
@@ -64,7 +68,7 @@ h1 {
   max-width: 350px;
 }
 
-.header a:nth-child(3){
+.header a:nth-child(3) {
   border-top: none;
   border-bottom: none;
 }
@@ -77,7 +81,7 @@ h1 {
   max-width: 350px;
   width: 100%;
   border-bottom: 2px solid black;
-  margin: 0 0 0 12px;;
+  margin: 0 0 0 12px;
 }
 
 .section p {
@@ -85,7 +89,7 @@ h1 {
   margin: 0;
 }
 
-.section p span{
+.section p span {
   font-weight: bold;
 }
 
@@ -102,10 +106,6 @@ h1 {
 
 .job {
   padding: 24px 0 0 0;
-}
-
-.job-header{
-
 }
 
 .job-header p {
@@ -139,6 +139,7 @@ h1 {
 .about {
   max-width: 900px;
   margin: 0 auto;
+  padding-top: 48px;
 }
 
 .about h2 {
@@ -146,14 +147,11 @@ h1 {
   border-bottom: 2px solid black;
   margin: 0 0 0 24px;
   padding: 24px 0 0 0;
-  /* font-weight: bold; */
 }
 
-.about .opacity-wrap {
+.about .about-copy {
   height: 100%;
   width: 100%;
-  min-height: 600px;
-  min-width: 900px;
 }
 
 .about .section-content p {
@@ -163,7 +161,7 @@ h1 {
   margin: 0;
 }
 
-.main-content{
+.main-content {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
@@ -173,23 +171,26 @@ h1 {
 }
 
 .ocracoke-img {
-  min-height: 600px; 
+  min-height: 600px;
   min-width: 900px;
   width: 100%;
-  background-image: url('assets/ocracoke-surf.jpeg');
+  background-image: url("assets/ocracoke-surf.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
- .photo-credit {
+.photo-credit {
   display: flex;
   justify-content: flex-end;
   color: white;
   font-size: 8px;
 }
 
- .photo-credit a {
+.photo-credit a {
   color: white;
   font-size: 8px;
   text-decoration: none;
@@ -197,7 +198,6 @@ h1 {
 
 .section-content {
   max-width: 700px;
-  /* margin: 0 auto; */
 }
 
 .contact {
@@ -215,7 +215,7 @@ h1 {
 }
 
 .contact img {
- height: 24px;
+  height: 24px;
 }
 
 .contact svg {
@@ -223,5 +223,73 @@ h1 {
   width: 24px;
 }
 
+@media only screen and (max-width: 900px) {
+  .header {
+    padding: 0;
+  }
 
+  .header-container {
+    max-width: none;
+    padding: 0 12px;
+  }
+  .header-container h2 {
+    margin: 0;
+  }
 
+  .surf-forecast {
+    display: none;
+  }
+
+  .job-header {
+    padding: 0 12px;
+  }
+  .job-header h2, .job-header h3 {
+    margin: 0;
+  }
+  .job-header .co-description {
+    padding-left: 0;
+  }
+  .job-header p {
+    padding-left: 0;
+  }
+
+  .about {
+    min-width: none;
+    margin: 0;
+  }
+  .about .ocracoke-img {
+    min-height: 400px;
+    min-width: 0;
+    width: auto;
+  }
+  .about .about-copy {
+    height: 100%;
+    width: auto;
+    padding: 24px 12px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  .about .about-copy .section-content {
+    max-width: 100%;
+  }
+  .about .about-copy .section-content p {
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    color: white;
+  }
+  .about .about-copy h2 {
+    margin: 0;
+    padding: 0;
+    color: white;
+    border-bottom: 2px solid white;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .section-content {
+    max-width: none;
+    margin: 0;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
