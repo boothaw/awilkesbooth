@@ -91,3 +91,27 @@
     </div>
   </body>
 </html>
+
+<script>
+  const sturnsID = '5842041f4e65fad6a7708867';
+  response = {};
+
+  // https://services.surfline.com/kbyg/spots/forecasts/?spotId=590927576a2e4300134fbed8&days=3&intervalHours=12&maxHeights=false
+
+  // fetch('https://services.surfline.com/kbyg/spots/forecastzs/{wave}?{5842041f4e65fad6a7708867}')
+  // fetch('https://services.surfline.com/kbyg/spots/forecastzs/?spotId=5842041f4e65fad6a7708867')
+
+  // figure out how to store data 
+  
+  const info = [];
+
+  const prom = fetch('https://services.surfline.com/kbyg/spots/forecasts/?spotId=5842041f4e65fad6a7708867')
+    // .then(response => {
+    //   return response.json();
+    // })
+    .then(blob => blob.json())
+    .then(data => console.log(data))
+    .then(data => info.push(...data))
+
+  
+</script>
