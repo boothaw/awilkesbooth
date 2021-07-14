@@ -16,8 +16,13 @@
         <a href="#about">about</a>
         <a href="#contact">contact</a>
       </div>
-      <div class="surf-forecast">
-        <p>surf report - coming soon</p>
+      <div class="surf-forecast-container">
+        <div class="surf-forecast">
+          <p class="result surf">Go Surf!!</p>
+          <p class="result work">Keep working</p>
+          <p class="check-button">Surf Check at S-Turns</p>
+        </div>
+        <p class="sponsored" >Powered by <a href="https://www.surfline.com/">Surfline</a></p>
       </div>
     </div>
     <div class="main-content">
@@ -93,25 +98,38 @@
 </html>
 
 <script>
-  const sturnsID = '5842041f4e65fad6a7708867';
-  response = {};
+  const sturnsID = 'https://services.surfline.com/kbyg/spots/forecasts/?spotId=5842041f4e65fad6a7708867';
 
-  // https://services.surfline.com/kbyg/spots/forecasts/?spotId=590927576a2e4300134fbed8&days=3&intervalHours=12&maxHeights=false
+  const checkSurf = document.querySelector('.check-button');
+  const work = document.querySelector('.work');
+  const surf = document.querySelector('.surf');
+  let info = []; 
 
-  // fetch('https://services.surfline.com/kbyg/spots/forecastzs/{wave}?{5842041f4e65fad6a7708867}')
-  // fetch('https://services.surfline.com/kbyg/spots/forecastzs/?spotId=5842041f4e65fad6a7708867')
-
-  // figure out how to store data 
-  
-  const info = [];
-
-  const prom = fetch('https://services.surfline.com/kbyg/spots/forecasts/?spotId=5842041f4e65fad6a7708867')
-    // .then(response => {
-    //   return response.json();
-    // })
+  const prom = fetch(sturnsID)
     .then(blob => blob.json())
-    .then(data => console.log(data))
-    .then(data => info.push(...data))
+    .then(data => info = data)
+    
 
+  function surfCheck() {
+    const work = document.querySelector('.work');
+    const surf = document.querySelector('.surf');
+    if (
+      info.data.forecasts[0].surf.min > 1.5 
+      && info.data.forecasts[0].surf.max < 10
+      && 
+      (info.data.forecasts[0].wind.speed < 10 
+      || info.data.forecasts[0].wind.direction < 330 
+      && info.data.forecasts[0].wind.direction > 210)) {
+
+        surf.classList.add('active')
+        checkSurf.classList.toggle('result')
+
+    } else {
+        work.classList.add('active')
+        checkSurf.classList.toggle('result')
+    }
+  }
+
+  checkSurf.addEventListener('click', surfCheck);
   
 </script>
