@@ -39,6 +39,9 @@ h1 {
   padding: 0 12px;
   max-width: 350px;
 }
+.header :hover {
+  color: #696969;
+}
 
 .header a {
   text-decoration: none;
@@ -49,11 +52,80 @@ h1 {
   border: none;
 }
 
-.surf-forecast {
+.surf-forecast-container {
   display: flex;
-  align-items: flex-end;
-  max-width: 250px;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.surf-forecast {
+  color: black;
   border-bottom: 2px solid black;
+}
+.surf-forecast .check-button:hover {
+  color: #696969;
+}
+
+.result {
+  display: none;
+}
+
+.active {
+  display: block;
+  animation: fadeIn linear 1s;
+  -webkit-animation: fadeIn linear 1s;
+  -moz-animation: fadeIn linear 1s;
+  -o-animation: fadeIn linear 1s;
+  -ms-animation: fadeIn linear 1s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.sponsored {
+  font-size: 8px;
+  margin: 0;
+  padding: 4px 0 0 0;
+}
+.sponsored a {
+  color: #696969;
 }
 
 .surf-forecast p {
@@ -236,7 +308,7 @@ h1 {
     margin: 0;
   }
 
-  .surf-forecast {
+  .surf-forecast-container {
     display: none;
   }
 
