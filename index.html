@@ -16,14 +16,6 @@
         <a href="#about">about</a>
         <a href="#contact">contact</a>
       </div>
-      <div class="surf-forecast-container">
-        <div class="surf-forecast">
-          <p class="result surf">Go Surf!!</p>
-          <p class="result work">Keep working</p>
-          <p class="check-button">Surf Check at S-Turns</p>
-        </div>
-        <p class="sponsored" >Powered by the <a href="https://www.surfline.com/">Surfline</a> API</p>
-      </div>
     </div>
     <div class="main-content">
       <div class="work section" id="work">
@@ -96,40 +88,3 @@
     </div>
   </body>
 </html>
-
-<script>
-  const sturnsID = 'https://services.surfline.com/kbyg/spots/forecasts/?spotId=5842041f4e65fad6a7708867';
-
-  const checkSurf = document.querySelector('.check-button');
-  const work = document.querySelector('.work');
-  const surf = document.querySelector('.surf');
-  let info = []; 
-
-  const prom = fetch(sturnsID)
-    .then(blob => blob.json())
-    .then(data => info = data)
-    
-
-  function surfCheck() {
-    const work = document.querySelector('.work');
-    const surf = document.querySelector('.surf');
-    if (
-      info.data.forecasts[0].surf.min > 1.5 
-      && info.data.forecasts[0].surf.max < 10
-      && 
-      (info.data.forecasts[0].wind.speed < 10 
-      || info.data.forecasts[0].wind.direction < 330 
-      && info.data.forecasts[0].wind.direction > 210)) {
-
-        surf.classList.add('active')
-        checkSurf.classList.toggle('result')
-
-    } else {
-        work.classList.add('active')
-        checkSurf.classList.toggle('result')
-    }
-  }
-
-  checkSurf.addEventListener('click', surfCheck);
-  
-</script>
