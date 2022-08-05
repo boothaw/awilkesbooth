@@ -219,6 +219,7 @@ h1 {
   border-bottom: 2px solid black;
   margin: 0 0 0 24px;
   padding: 24px 0 0 0;
+  text-shadow: 2px 0px 2px #fff;
 }
 
 .about .about-copy {
@@ -231,6 +232,7 @@ h1 {
   max-width: 350px;
   padding: 12px 0 0 24px;
   margin: 0;
+  text-shadow: 2px 0px 2px #fff;
 }
 
 .main-content {
@@ -338,7 +340,7 @@ h1 {
     height: 100%;
     width: auto;
     padding: 24px 12px;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.2);
   }
   .about .about-copy .section-content {
     max-width: 100%;
@@ -355,6 +357,15 @@ h1 {
     padding: 0;
     color: white;
     border-bottom: 2px solid white;
+  }
+
+  .about h2 {
+    text-shadow: none;
+    box-shadow: none;
+  }
+
+  .about .section-content p {
+    text-shadow: none;
   }
 }
 @media only screen and (max-width: 700px) {
