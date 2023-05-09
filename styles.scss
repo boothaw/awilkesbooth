@@ -3,7 +3,7 @@
 
 @font-face {
 	font-family: 'Poppins';
-	src:  url('assets/fonts/Poppins-ExtraLight.woff2') format('woff2'),
+	src:  url('assets/fonts/Poppins-Light.woff2') format('woff2'),
 }
 @font-face {
 	font-family: 'Poppins-Bold';
@@ -171,6 +171,18 @@ h1,h2,h3,h4,h5,h6{
   .section p {
     padding: 0 12px;
     margin: 0;
+  }
+
+  .check-it{
+	font-family: 'Poppins-Bold';
+  }
+
+  .check-it a{
+	font-family: 'Poppins';
+  }
+
+  .section p.check-it span{
+	font-family: 'Poppins';
   }
   
   .section p span{
