@@ -11,11 +11,12 @@ body {
   color: black;
   margin: 0;
   scroll-behavior: smooth;
+  font-weight: 400;
 }
 
 @media screen {
   html,
-body {
+  body {
     scroll-behavior: smooth;
   }
 }
@@ -43,13 +44,18 @@ h1 {
   color: #696969;
 }
 
-.header a {
+.header a:not(:first-of-type) {
   text-decoration: none;
   color: black;
+  font-size: 1.5em;
+  font-weight: 600;
 }
 
 .header a:first-child {
   border: none;
+  text-decoration: none;
+  color: black;
+  font-size: 1em;
 }
 
 .surf-forecast-container {
@@ -138,6 +144,7 @@ h1 {
   border-bottom: 2px solid black;
   margin: 0;
   max-width: 350px;
+  font-size: 1.5em;
 }
 
 .header a:nth-child(3) {
@@ -162,7 +169,7 @@ h1 {
 }
 
 .section p span {
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .section .skills {
@@ -301,7 +308,6 @@ h1 {
   .header {
     padding: 24px 0 0 0;
   }
-
   .header-container {
     max-width: none;
     padding: 0 12px;
@@ -309,11 +315,9 @@ h1 {
   .header-container h2 {
     margin: 0;
   }
-
   .surf-forecast-container {
     display: none;
   }
-
   .job-header {
     padding: 0 12px;
   }
@@ -326,7 +330,6 @@ h1 {
   .job-header p {
     padding-left: 0;
   }
-
   .about {
     min-width: none;
     margin: 0;
@@ -358,12 +361,10 @@ h1 {
     color: white;
     border-bottom: 2px solid white;
   }
-
   .about h2 {
     text-shadow: none;
     box-shadow: none;
   }
-
   .about .section-content p {
     text-shadow: none;
   }
