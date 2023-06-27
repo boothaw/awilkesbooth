@@ -2,419 +2,437 @@
 // sass --watch styles.scss styles.css
 
 @font-face {
-	font-family: 'Poppins';
-	src:  url('assets/fonts/Poppins-Light.woff2') format('woff2'),
+  font-family: "Poppins";
+  src: url("assets/fonts/Poppins-Light.woff2") format("woff2");
 }
 @font-face {
-	font-family: 'Poppins-Bold';
-	src:  url('assets/fonts/Poppins-Medium.woff2') format('woff2');
-	
+  font-family: "Poppins-Bold";
+  src: url("assets/fonts/Poppins-Medium.woff2") format("woff2");
 }
 
 html {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 body {
-    width: 100%;
-    height: 100%;
-    font-family: 'Poppins', sans-serif;
-    letter-spacing: 1px;
-    color: black;
-    margin: 0;
-    scroll-behavior: smooth; 
-	font-weight: 400;
-  }
-  
-  @media screen  {
-    html,
-    body {
-      scroll-behavior: smooth; } }
-  
-  
-h1,h2,h3,h4,h5,h6{
-	font-family: 'Poppins-Bold';
+  width: 100%;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
+  color: black;
+  margin: 0;
+  scroll-behavior: smooth;
+  font-weight: 400;
 }
 
-  h1 {
-    margin: 0;
-    padding: 0 0 12px 0;
+@media screen {
+  html,
+  body {
+    scroll-behavior: smooth;
   }
-  
-  .header-container{
-    max-width: 900px;;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    padding-top: 24px;
-  }
-  
-  .header {
-    width: 100%;
-    height: 100%;
-    padding: 0 12px;
-    max-width: 350px;
+}
 
-    :hover {
-        color: #696969;
-    }
-  }
-  
-  .header a:not(:first-of-type) {
-    text-decoration: none;
-    color: black;
-	font-size: 1.5em;
-	font-family: 'Poppins-Bold';
-  }
-  
-  .header a:first-child {
-    border: none;
-	text-decoration: none;
-    color: black;
-	font-size: 1em
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins-Bold";
+}
 
-  .surf-forecast-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-  }
-  
-  .surf-forecast {
-    color: black;
-    border-bottom: 2px solid black;
+h1 {
+  margin: 0;
+  padding: 0 0 12px 0;
+}
 
-    .check-button:hover {
-        color: #696969;
-    }
-  }
+.header-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 24px;
+}
 
-  .result {
-    display: none;
-  }      
+.header {
+  width: 100%;
+  height: 100%;
+  padding: 0 12px;
+  max-width: 350px;
 
-  .active {
-      display: block;
-      animation: fadeIn linear 1s;
-    -webkit-animation: fadeIn linear 1s;
-    -moz-animation: fadeIn linear 1s;
-    -o-animation: fadeIn linear 1s;
-    -ms-animation: fadeIn linear 1s;
-
-    @keyframes fadeIn {
-        0% {opacity:0;}
-        100% {opacity:1;}
-      }
-      
-      @-moz-keyframes fadeIn {
-        0% {opacity:0;}
-        100% {opacity:1;}
-      }
-      
-      @-webkit-keyframes fadeIn {
-        0% {opacity:0;}
-        100% {opacity:1;}
-      }
-      
-      @-o-keyframes fadeIn {
-        0% {opacity:0;}
-        100% {opacity:1;}
-      }
-      
-      @-ms-keyframes fadeIn {
-        0% {opacity:0;}
-        100% {opacity:1;}
-      }
-  }
-
-  .sponsored {
-    font-size: 8px;
-    margin: 0;
-    padding: 4px 0 0 0;
-
-    a {
-        color: #696969;
-    }
-  }
-  
-  
-  .surf-forecast p {
-    margin: 0;
-  }
-  
-  .header a  {
-    display: flex;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    margin: 0;
-    max-width: 350px;
-	font-size: 1.5em;
-  }
-  
-  .header a:nth-child(3){
-    border-top: none;
-    border-bottom: none;
-  }
-  
-  .section {
-    padding: 24px 0 0 0;
-  }
-  
-  .section h2 {
-    max-width: 350px;
-    width: 100%;
-    border-bottom: 2px solid black;
-    margin: 0 0 0 12px;;
-  }
-  
-  .section p {
-    padding: 0 12px;
-    margin: 0;
-  }
-
-  .check-it{
-	font-family: 'Poppins-Bold';
-  }
-
-  .check-it a{
-	font-family: 'Poppins';
-  }
-
-  .section p.check-it span{
-	font-family: 'Poppins';
-  }
-  
-  .section p span{
-	font-family: 'Poppins-Bold';
-  }
-  
-  .section .skills {
-    padding: 4px 12px;
-    font-size: 12px;
-    max-width: 350px;
-    margin-left: 0;
-  }
-  
-  .skills a {
+  :hover {
     color: #696969;
   }
-  
-  .job {
-    padding: 24px 0 0 0;
-  }
-  
-  .job-header p {
-    margin: 0;
-    padding: 4px 0 0 12px;
-  }
-  
-  .job-header h3 {
-    font-size: 18px;
-    margin: 0 0 0 12px;
-    max-width: 350px;
-    border-bottom: 2px solid black;
-  }
-  
-  .job ul {
-    margin: 0;
-    padding: 4px 0 4px 40px;
-  }
-  
-  .job .co-description {
-    padding: 4px 12px;
-    font-size: 12px;
-    max-width: 350px;
-    margin-left: 0;
-  }
-  
-  .job a {
+}
+
+.header a:not(:first-of-type) {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5em;
+  font-family: "Poppins-Bold";
+}
+
+.header a:first-child {
+  border: none;
+  text-decoration: none;
+  color: black;
+  font-size: 1em;
+}
+
+.surf-forecast-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.surf-forecast {
+  color: black;
+  border-bottom: 2px solid black;
+
+  .check-button:hover {
     color: #696969;
   }
-  
-  .about {
-    max-width: 900px;
-    margin: 0 auto;
-    padding-top: 48px;
-  }
-  
-  .about h2 {
-    color: black;
-    border-bottom: 2px solid black;
-    margin: 0 0 0 24px;
-    padding: 24px 0 0 0;
-    text-shadow: 2px 0px 2px #fff;
-  }
-  
-  .about .about-copy {
-    height: 100%;
-    width: 100%;
-  }
-  
-  .about .section-content p {
-    color: black;
-    max-width: 350px;
-    padding: 12px 0 0 24px;
-    margin: 0;
-    text-shadow: 2px 0px 2px #fff;
-  }
-  
-  .main-content{
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    margin: 0 auto;
-    max-width: 900px;
-    padding-bottom: 24px;
-  }
-  
-  .ocracoke-img {
-    min-height: 600px; 
-    min-width: 900px;
-    width: 100%;
-    background-image: url('assets/ocracoke-surf.jpeg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+}
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.result {
+  display: none;
+}
+
+.active {
+  display: block;
+  animation: fadeIn linear 1s;
+  -webkit-animation: fadeIn linear 1s;
+  -moz-animation: fadeIn linear 1s;
+  -o-animation: fadeIn linear 1s;
+  -ms-animation: fadeIn linear 1s;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
-  
-   .photo-credit {
-    display: flex;
-    justify-content: flex-end;
-    color: white;
-    font-size: 8px;
+
+  @-moz-keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
-  
-   .photo-credit a {
-    color: white;
-    font-size: 8px;
-    text-decoration: none;
+
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
-  
-  .section-content {
-    max-width: 700px;
+
+  @-o-keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
-  
-  .contact {
-    padding-bottom: 48px;
+
+  @-ms-keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
-  
-  .contact p {
-    padding: 12px 0 0 12px;
-  }
-  
-  .contact a {
+}
+
+.sponsored {
+  font-size: 8px;
+  margin: 0;
+  padding: 4px 0 0 0;
+
+  a {
     color: #696969;
-    padding-left: 12px;
-    padding-bottom: 4px;
   }
-  
-  .contact img {
-   height: 24px;
-  }
-  
-  .contact svg {
-    height: 24px;
-    width: 24px;
-  }
+}
 
+.surf-forecast p {
+  margin: 0;
+}
+
+.header a {
+  display: flex;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  margin: 0;
+  max-width: 350px;
+  font-size: 1.5em;
+}
+
+.header a:nth-child(3) {
+  border-top: none;
+  border-bottom: none;
+}
+
+.section {
+  padding: 24px 0 0 0;
+}
+
+.section h2 {
+  max-width: 350px;
+  width: 100%;
+  border-bottom: 2px solid black;
+  margin: 0 0 0 12px;
+}
+
+.section p {
+  padding: 0 12px;
+  margin: 0;
+}
+
+.check-it {
+  font-family: "Poppins-Bold";
+}
+
+.check-it a {
+  font-family: "Poppins";
+}
+
+.section p.check-it span {
+  font-family: "Poppins";
+}
+
+.section p span {
+  font-family: "Poppins-Bold";
+}
+
+.section .skills {
+  padding: 4px 12px;
+  font-size: 12px;
+  max-width: 350px;
+  margin-left: 0;
+}
+
+.skills a {
+  color: #696969;
+}
+
+.job {
+  padding: 24px 0 0 0;
+}
+
+.job-header p {
+  margin: 0;
+  padding: 4px 0 0 12px;
+}
+
+.job-header h3 {
+  font-size: 18px;
+  margin: 0 0 0 12px;
+  max-width: 350px;
+  border-bottom: 2px solid black;
+}
+
+.job ul {
+  margin: 0;
+  padding: 4px 0 4px 40px;
+}
+
+.job .co-description {
+  padding: 4px 12px;
+  font-size: 12px;
+  max-width: 350px;
+  margin-left: 0;
+}
+
+.job a {
+  color: #696969;
+}
+
+.about {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 48px;
+}
+
+.about h2 {
+  color: black;
+  border-bottom: 2px solid black;
+  margin: 0 0 0 24px;
+  padding: 24px 0 0 0;
+}
+
+.about .about-copy {
+  height: 100%;
+  width: 100%;
+}
+
+.about .section-content p {
+  color: black;
+  font-weight: bold;
+  max-width: 350px;
+  padding: 12px 0 0 24px;
+  margin: 0;
+  text-shadow: 2px 0px 2px rgba(255, 255, 255, 0.2);
+}
+
+.main-content {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 900px;
+  padding-bottom: 24px;
+}
+
+.ocracoke-img {
+  min-height: 600px;
+  min-width: 900px;
+  width: 100%;
+  background-image: url("assets/ocracoke-surf.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.photo-credit {
+  display: flex;
+  justify-content: flex-end;
+  color: white;
+  font-size: 8px;
+}
+
+.photo-credit a {
+  color: white;
+  font-size: 8px;
+  text-decoration: none;
+}
+
+.section-content {
+  max-width: 700px;
+}
+
+.contact {
+  padding-bottom: 48px;
+}
+
+.contact p {
+  padding: 12px 0 0 12px;
+}
+
+.contact a {
+  color: #696969;
+  padding-left: 12px;
+  padding-bottom: 4px;
+}
+
+.contact img {
+  height: 24px;
+}
+
+.contact svg {
+  height: 24px;
+  width: 24px;
+}
 
 //   Media Queries
 
 @media only screen and (max-width: 900px) {
-    .header{
-        padding: 24px 0 0 0;
+  .header {
+    padding: 24px 0 0 0;
+  }
+
+  .header-container {
+    max-width: none;
+    padding: 0 12px;
+
+    h2 {
+      margin: 0;
+    }
+  }
+
+  .surf-forecast-container {
+    display: none;
+  }
+
+  .job-header {
+    padding: 0 12px;
+
+    h2,
+    h3 {
+      margin: 0;
     }
 
-    .header-container {
-        max-width: none;
-        padding: 0 12px;
-
-        h2 {
-            margin: 0;
-        }
+    .co-description {
+      padding-left: 0;
     }
 
-    .surf-forecast-container {
-        display: none;
+    p {
+      padding-left: 0;
+    }
+  }
+
+  .about {
+    min-width: none;
+    margin: 0;
+
+    .ocracoke-img {
+      min-height: 400px;
+      min-width: 0;
+      width: auto;
     }
 
-    .job-header{
-        padding: 0 12px;
+    .about-copy {
+      height: 100%;
+      width: auto;
+      padding: 24px 12px;
+      background-color: rgb(0, 0, 0, 0.2);
 
+      .section-content {
+        max-width: 100%;
 
-        h2, h3 {
-            margin: 0;
+        p {
+          margin: 0;
+          padding-left: 0;
+          padding-right: 0;
+          padding-bottom: 0;
+          color: white;
         }
+      }
 
-        .co-description{
-            padding-left: 0;
-        }
-
-        p{
-            padding-left: 0;  
-        }
-    }
-  
-
-    .about {
-        min-width: none;
+      h2 {
         margin: 0;
-
-        .ocracoke-img {
-            min-height: 400px; 
-            min-width: 0;
-            width: auto;
-        }
-
-        .about-copy{
-            height: 100%;
-            width: auto;
-            padding: 24px 12px;
-            background-color: rgb(0,0,0,.2);
-
-            .section-content{
-                max-width: 100%;
-
-                p {
-                    margin: 0;
-                    padding-left: 0;
-                    padding-right: 0;
-                    padding-bottom: 0;
-                    color: white;
-                }
-            }
-
-            h2 {
-                margin: 0;
-                padding: 0;
-                color: white;
-                border-bottom: 2px solid white;
-            }
-        }
+        padding: 0;
+        color: white;
+        border-bottom: 2px solid white;
+      }
     }
-      
+  }
+
   .about h2 {
     text-shadow: none;
     box-shadow: none;
   }
-  
+
   .about .section-content p {
     text-shadow: none;
   }
 }
 
 @media only screen and (max-width: 700px) {
-    .section-content {
-        max-width: none;
-        margin: 0;
-    }
+  .section-content {
+    max-width: none;
+    margin: 0;
+  }
 }
-  
-  
-  
-  

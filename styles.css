@@ -28,7 +28,12 @@ body {
     scroll-behavior: smooth;
   }
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Poppins-Bold";
 }
 
@@ -249,7 +254,6 @@ h1 {
   border-bottom: 2px solid black;
   margin: 0 0 0 24px;
   padding: 24px 0 0 0;
-  text-shadow: 2px 0px 2px #fff;
 }
 
 .about .about-copy {
@@ -259,10 +263,11 @@ h1 {
 
 .about .section-content p {
   color: black;
+  font-weight: bold;
   max-width: 350px;
   padding: 12px 0 0 24px;
   margin: 0;
-  text-shadow: 2px 0px 2px #fff;
+  text-shadow: 2px 0px 2px rgba(255, 255, 255, 0.2);
 }
 
 .main-content {
@@ -344,7 +349,8 @@ h1 {
   .job-header {
     padding: 0 12px;
   }
-  .job-header h2, .job-header h3 {
+  .job-header h2,
+  .job-header h3 {
     margin: 0;
   }
   .job-header .co-description {
